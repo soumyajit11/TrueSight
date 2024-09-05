@@ -1,0 +1,51 @@
+.invert-img {
+    filter: invert(1) brightness(2);
+}
+
+/* App.css or relevant stylesheet */
+.gradient-text {
+    background: linear-gradient(90deg, #63e, #b28ad3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Use this for WebKit browsers */
+    background-clip: text; /* Fallback */
+    color: transparent; /* Standard fallback for other browsers */
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.logos {
+    display: flex;
+}
+
+.logo:nth-child(2){
+    transition-delay: 200ms;
+}
+
+.logo:nth-child(3){
+    transition-delay: 400ms;
+}
+
+.logo:nth-child(4){
+    transition-delay: 600ms;
+}
+
+.logo:nth-child(5){
+    transition-delay: 800ms;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
