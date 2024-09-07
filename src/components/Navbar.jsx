@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { NavLink } from 'react-router-dom'
 const Navbar = () => {
     return (
         <nav className='bg-black text-white flex justify-around items-center h-10'>
@@ -14,7 +14,7 @@ const Navbar = () => {
                     <a className=" font-lg  hover:font-bold hover:shadow-xl px-2 py-1 rounded" href="#">Contacts</a>
                 </li>
             </ul>
-            <div>Log In</div>
+            <NavLink className={(e)=>{return e.isActive?"red": "" }} to="/signup"><div>Log In</div></NavLink>
         </nav>
     )
 }
